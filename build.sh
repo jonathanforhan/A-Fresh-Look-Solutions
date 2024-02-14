@@ -11,11 +11,11 @@ mkdir -p dist/
 for i in {2..11};
 do
     if test -f "latex/chapter_$i/build.sh"; then
-        cwd=$(pwd);
-        cd "latex/chapter_$i/" || exit 1;
-        bash build.sh;
+        cwd=$(pwd)
+        cd "latex/chapter_$i/" || exit 1
+        bash build.sh
         cp ./*.svg "$cwd/dist"
-        cd "$cwd" || exit 1;
+        cd "$cwd" || exit 1
     fi
 done
 
